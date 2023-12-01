@@ -46,7 +46,7 @@ jobs:
           sudo apt install ${{ matrix.toolchain.packages }} -y
 
       - name: Configure
-        run: cmake -Bbuild -GNinja -DQSCHEMATIC_BUILD_DEMO=ON -DQSCHEMATIC_DEPENDENCY_GPDS_DOWNLOAD=ON
+        run: cmake -Bbuild -GNinja -DQSCHEMATIC_BUILD_DEMO=ON -DQSCHEMATIC_DEPENDENCY_GPDS_DOWNLOAD=ON -DQSCHEMATIC_DEPENDENCY_GPDS_TARGET=gpds::gpds-static
 
       - name: Build
         run: cmake --build build
