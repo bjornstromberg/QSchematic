@@ -158,7 +158,7 @@ if (QSCHEMATIC_BUILD_STATIC)
 
     target_compile_definitions(
         ${TARGET_STATIC}
-            PUBLIC
+        PUBLIC
             QSCHEMATIC_STATIC_DEFINE
     )
 endif()
